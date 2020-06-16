@@ -39,6 +39,7 @@ class BLECast {
         void end(void);
     private:
         bool _init_gap();
+        bool _stop_gap();
         void setAdvData(std::string data);
 
         std::string local_name;

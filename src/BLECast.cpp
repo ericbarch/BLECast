@@ -82,7 +82,7 @@ bool BLECast::_init_gap(){
     return true;
 }
 
-static bool _stop_gap()
+bool BLECast::_stop_gap()
 {
     if(btStarted()){
         esp_bluedroid_disable();
