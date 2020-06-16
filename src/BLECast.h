@@ -29,41 +29,21 @@
 
 #include "Arduino.h"
 
-struct ble_gap_adv_params_s;
-
 class BLECast {
     public:
-
         BLECast(std::string localName);
         ~BLECast(void);
 
-        /**
-         * Start BLE Advertising
-         *
-         * @param[in] localName  local name to advertise
-         *
-         * @return true on success
-         *
-         */
         bool begin();
-
         void setManufacturerData(char* payload, uint8_t len);
-
-        /**
-         * Stop BLE Advertising
-         *
-         * @return none
-         */
         void end(void);
-
     private:
         bool _init_gap();
         void setAdvData(std::string data);
+
         std::string local_name;
         std::string m_payload;
         bool running = false;
-    private:
-
 };
 
 #endif
