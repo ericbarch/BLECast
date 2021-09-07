@@ -22,6 +22,7 @@
 #include <cstdint>
 #include <cstdio>
 #include <cstdlib>
+#include <string>
 #include <cstring>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
